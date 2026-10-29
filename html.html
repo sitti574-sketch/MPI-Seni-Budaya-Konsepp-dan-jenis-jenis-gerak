@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Media Pembelajaran Interaktif Seni Budaya: Konsep Gerak dan Jenis-Jenis Gerak">
+<title>MPI Seni Budaya — Konsep Gerak dan Jenis-Jenis Gerak</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand-mark">🎭</div>
+  <div><strong>MPI SENI BUDAYA</strong><small>SMP Negeri 8 Kolaka Utara · Kelas VIII · Fase D</small></div>
+  <button id="soundToggle" class="icon-btn" aria-label="Aktifkan atau matikan suara">🔊 Suara</button>
+</header>
+<main id="app">
+  <section id="screen-splash" class="screen active hero">
+    <div class="hero-art" aria-hidden="true"><span>💃</span><span>⚽</span><span>🕺</span></div>
+    <p class="eyebrow">MEDIA PEMBELAJARAN INTERAKTIF</p>
+    <h1>Konsep Gerak dan<br><em>Jenis-Jenis Gerak</em></h1>
+    <p class="lead">Kenali gerak tubuh, jelajahi simulasi, lalu uji pemahamanmu!</p>
+    <div class="teacher-card"><b>Disusun oleh</b><br>SITTI NURUL HAERATI ANSAR, S.Pd<br><span>SMP NEGERI 8 KOLAKA UTARA</span></div>
+    <button class="primary" data-go="screen-home">Mulai Belajar <span>→</span></button>
+  </section>
+
+  <section id="screen-home" class="screen">
+    <p class="eyebrow">SELAMAT DATANG</p><h2>Petualangan Gerak</h2>
+    <p>Pilih aktivitas belajar. Kerjakan asesmen awal sebelum mempelajari materi, lalu selesaikan kuis dan refleksi.</p>
+    <div class="menu-grid">
+      <button class="menu-card" data-go="screen-pretest"><span>🧠</span><b>Asesmen Awal</b><small>Periksa pengetahuan awal</small></button>
+      <button class="menu-card" data-go="screen-material"><span>📚</span><b>Materi Pokok</b><small>Konsep dan jenis gerak</small></button>
+      <button class="menu-card" data-go="screen-lab"><span>🧪</span><b>Laboratorium Virtual</b><small>Coba simulasi gerak</small></button>
+      <button class="menu-card" data-go="screen-quiz"><span>🎯</span><b>Kuis Interaktif</b><small>3 soal dan skor otomatis</small></button>
+      <button class="menu-card" data-go="screen-posttest"><span>🏁</span><b>Asesmen Akhir</b><small>Ukur pemahaman akhir</small></button>
+      <button class="menu-card" data-go="screen-reflection"><span>💬</span><b>Refleksi</b><small>Renungkan pengalaman belajar</small></button>
+      <button class="menu-card" data-go="screen-profile"><span>👩‍🏫</span><b>Profil</b><small>Identitas pengembang</small></button>
+    </div>
+  </section>
+
+  <section id="screen-pretest" class="screen">
+    <button class="back" data-go="screen-home">← Menu utama</button>
+    <p class="eyebrow">LANGKAH 1</p><h2>Asesmen Awal</h2><p>Jawablah tanpa takut salah. Hasil ini untuk mengetahui pengetahuan awalmu.</p>
+    <div id="pretestBox" class="question-box"></div>
+    <button id="submitPretest" class="primary">Periksa Jawaban</button><p id="pretestResult" class="feedback" aria-live="polite"></p>
+  </section>
+
+  <section id="screen-material" class="screen">
+    <button class="back" data-go="screen-home">← Menu utama</button>
+    <p class="eyebrow">LANGKAH 2</p><h2>Materi Pokok</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-tab="concept">Konsep Gerak</button><button class="tab" data-tab="loco">Lokomotor</button><button class="tab" data-tab="nonloco">Nonlokomotor</button><button class="tab" data-tab="manip">Manipulatif</button>
+    </div>
+    <article id="tab-concept" class="material-panel">
+      <div class="big-emoji">🧍‍♀️ ➜ 🏃</div><h3>Apa itu gerak?</h3>
+      <p>Gerak adalah perubahan posisi atau sikap tubuh, atau bagian tubuh, yang dilakukan secara sadar maupun sebagai respons terhadap rangsangan. Dalam aktivitas jasmani dan tari, gerak dapat digunakan untuk berpindah tempat, mengolah posisi tubuh, atau mengendalikan benda.</p>
+      <div class="callout"><b>Ingat!</b> Amati apakah tubuh berpindah tempat, tetap di tempat, atau mengendalikan suatu benda.</div>
+    </article>
+    <article id="tab-loco" class="material-panel hidden">
+      <div class="big-emoji">🏃‍♂️</div><h3>Gerak lokomotor</h3>
+      <p>Gerak yang menyebabkan tubuh berpindah dari satu tempat ke tempat lain.</p><ul><li>Berjalan</li><li>Berlari</li><li>Melompat</li><li>Meloncat dan berjingkat</li></ul>
+      <p class="example"><b>Contoh:</b> penari melangkah maju; pemain sepak bola berlari mengejar bola.</p>
+    </article>
+    <article id="tab-nonloco" class="material-panel hidden">
+      <div class="big-emoji">🙆</div><h3>Gerak nonlokomotor</h3>
+      <p>Gerak yang dilakukan tanpa berpindah tempat secara berarti. Tubuh atau bagian tubuh bergerak di tempat.</p><ul><li>Membungkuk</li><li>Memutar badan</li><li>Mengayun lengan</li><li>Menekuk lutut dan meregang</li></ul>
+      <p class="example"><b>Contoh:</b> penari memutar pergelangan tangan sambil tetap berdiri di tempat.</p>
+    </article>
+    <article id="tab-manip" class="material-panel hidden">
+      <div class="big-emoji">⚽ 🤲</div><h3>Gerak manipulatif</h3>
+      <p>Gerak yang melibatkan penguasaan atau penggunaan benda/objek, biasanya dengan tangan atau kaki.</p><ul><li>Melempar dan menangkap bola</li><li>Menendang bola</li><li>Memantulkan bola</li><li>Memukul atau menggiring bola</li></ul>
+      <p class="example"><b>Contoh:</b> pemain mengoper bola kepada teman dengan kaki.</p>
+    </article>
+    <div class="callout"><b>Tantangan berpikir kritis:</b> Dalam sepak bola, pemain berlari mengejar bola, berhenti lalu memutar badan, dan menendang bola ke teman. Identifikasi jenis gerak pada setiap tindakan. Mengapa satu rangkaian permainan dapat memadukan lebih dari satu jenis gerak?</div>
+    <button class="primary" data-go="screen-lab">Lanjut ke Simulasi →</button>
+  </section>
+
+  <section id="screen-lab" class="screen">
+    <button class="back" data-go="screen-home">← Menu utama</button>
+    <p class="eyebrow">LANGKAH 3</p><h2>Laboratorium Virtual</h2>
+    <p>Pilih sebuah tindakan, amati ilustrasi, lalu tentukan kategori geraknya.</p>
+    <div class="lab-layout">
+      <div class="simulation" id="simulation"><div class="sim-sky">☀️</div><div class="sim-person" id="simPerson">🏃</div><div class="sim-ground"></div><div class="sim-caption" id="simCaption">Berlari ke depan</div></div>
+      <div class="lab-controls">
+        <label for="actionSelect">Skenario simulasi</label>
+        <select id="actionSelect">
+          <option value="run">Berlari ke depan</option><option value="bend">Membungkuk di tempat</option><option value="kick">Menendang bola</option><option value="catch">Menangkap bola</option><option value="turn">Memutar badan di tempat</option>
+        </select>
+        <button id="playSim" class="secondary">▶ Jalankan simulasi</button>
+        <p id="simExplanation" class="small">Berlari membuat tubuh berpindah tempat: lokomotor.</p>
+        <fieldset><legend>Menurutmu, jenis geraknya adalah…</legend>
+          <label class="choice"><input type="radio" name="labAnswer" value="Lokomotor"> Lokomotor</label>
+          <label class="choice"><input type="radio" name="labAnswer" value="Nonlokomotor"> Nonlokomotor</label>
+          <label class="choice"><input type="radio" name="labAnswer" value="Manipulatif"> Manipulatif</label>
+          <button id="checkLab" class="primary">Cek Jawaban</button><p id="labFeedback" class="feedback" aria-live="polite"></p>
+        </fieldset>
+      </div>
+    </div>
+    <div class="callout"><b>Catatan:</b> beberapa aktivitas nyata menggabungkan kategori gerak. Untuk latihan ini, pilih kategori yang paling menonjol pada skenario.</div>
+    <button class="primary" data-go="screen-quiz">Lanjut ke Kuis →</button>
+  </section>
+
+  <section id="screen-quiz" class="screen">
+    <button class="back" data-go="screen-home">← Menu utama</button>
+    <p class="eyebrow">LANGKAH 4</p><h2>Kuis Interaktif</h2><p>Pilih jawaban terbaik untuk setiap soal. Skor dihitung langsung di perangkat ini (offline).</p>
+    <div id="quizBox"></div>
+    <button id="submitQuiz" class="primary">Nilai Kuis</button><button id="resetQuiz" class="secondary">Ulangi Kuis</button>
+    <p id="quizResult" class="feedback" aria-live="polite"></p>
+  </section>
+
+  <section id="screen-posttest" class="screen">
+    <button class="back" data-go="screen-home">← Menu utama</button>
+    <p class="eyebrow">LANGKAH 5</p><h2>Asesmen Akhir</h2><p>Bandingkan pemahamanmu setelah belajar. Jawab tiga pertanyaan berikut.</p>
+    <div id="posttestBox"></div><button id="submitPosttest" class="primary">Lihat Hasil</button><p id="posttestResult" class="feedback" aria-live="polite"></p>
+  </section>
+
+  <section id="screen-reflection" class="screen">
+    <button class="back" data-go="screen-home">← Menu utama</button>
+    <p class="eyebrow">LANGKAH 6</p><h2>Refleksi Belajar</h2>
+    <p>Luangkan waktu untuk memikirkan apa yang telah kamu pelajari.</p>
+    <label for="understanding">Seberapa paham kamu tentang tiga jenis gerak?</label>
+    <div class="range-row"><span>Masih bingung</span><input type="range" id="understanding" min="1" max="5" value="3"><span>Sangat paham</span></div><p id="rangeValue">Tingkat pemahaman: 3 dari 5</p>
+    <label for="reflectionText">Gerak apa yang paling mudah kamu kenali? Mengapa?</label><textarea id="reflectionText" rows="3" placeholder="Tulis refleksimu di sini…"></textarea>
+    <label for="nextStep">Apa yang ingin kamu latih lagi?</label><textarea id="nextStep" rows="2" placeholder="Contoh: membedakan gerak nonlokomotor dan manipulatif…"></textarea>
+    <button id="saveReflection" class="primary">Simpan Refleksi di Perangkat</button><p id="reflectionResult" class="feedback" aria-live="polite"></p>
+  </section>
+
+  <section id="screen-profile" class="screen">
+    <button class="back" data-go="screen-home">← Menu utama</button>
+    <p class="eyebrow">TENTANG MPI</p><h2>Profil Pengembang</h2>
+    <div class="profile-card"><div class="avatar">👩‍🏫</div><h3>SITTI NURUL HAERATI ANSAR, S.Pd</h3><p>Guru Mata Pelajaran Seni Budaya</p><b>SMP NEGERI 8 KOLAKA UTARA</b><hr><p><b>Materi:</b> Konsep Gerak dan Jenis-Jenis Gerak</p><p><b>Sasaran:</b> Kelas VIII · Fase D · Kurikulum Merdeka</p><p class="small">MPI ini dapat digunakan secara offline setelah folder diekstrak, atau diunggah ke hosting statis agar dapat diakses secara online.</p></div>
+  </section>
+</main>
+<footer><span>MPI Seni Budaya · Konsep Gerak</span><span id="progressText">Siap belajar</span></footer>
+<script src="app.js"></script>
+</body>
+</html>
